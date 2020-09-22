@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+	<head>
+
+    <title>Rigare</title>
+
+		<meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="keywords" content="">
+        <meta name="description" content="">
+        <meta name="Rigare" content="Rigare - Groundwater and Wetland Science">
+
+		<!-- favicon -->
+		<link rel="apple-touch-icon" sizes="57x57" href="rigare_favicon/apple-icon-57x57.png">
+		<link rel="apple-touch-icon" sizes="60x60" href="rigare_favicon/apple-icon-60x60.png">
+		<link rel="apple-touch-icon" sizes="72x72" href="rigare_favicon/apple-icon-72x72.png">
+		<link rel="apple-touch-icon" sizes="76x76" href="rigare_favicon/apple-icon-76x76.png">
+		<link rel="apple-touch-icon" sizes="114x114" href="rigare_favicon/apple-icon-114x114.png">
+		<link rel="apple-touch-icon" sizes="120x120" href="rigare_favicon/apple-icon-120x120.png">
+		<link rel="apple-touch-icon" sizes="144x144" href="rigare_favicon/apple-icon-144x144.png">
+		<link rel="apple-touch-icon" sizes="152x152" href="rigare_favicon/apple-icon-152x152.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="rigare_favicon/apple-icon-180x180.png">
+		<link rel="icon" type="image/png" sizes="192x192"  href="rigare_favicon/android-icon-192x192.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="rigare_favicon/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="96x96" href="rigare_favicon/favicon-96x96.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="rigare_favicon/favicon-16x16.png">
+		<link rel="manifest" href="rigare_favicon/manifest.json">
+		<meta name="msapplication-TileColor" content="#e4e1d3">
+		<meta name="msapplication-TileImage" content="rigare_favicon/ms-icon-144x144.png">
+		<meta name="theme-color" content="#e4e1d3">
+
+		<!-- Google Fonts -->
+    	<link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond|Kaushan+Script" rel="stylesheet">
+
+		<!-- CSS -->
+		<link rel="stylesheet" type="text/css"	href="css/styles.css">
+
+		<!-- jQuery -->
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+
+		<!-- icon animation -->
+		<link href="css/hamburgers.css" rel="stylesheet">
+
+    </head>
+
+  <body class="home cbp-spmenu-push">
+
+    <!-- Navbar -->
+		<nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s1">
+			<div class="menu">
+				<a href="#">About Rigare</a>
+				<hr>
+				<a href="#">Technical Capabilities</a>
+				<hr>
+				<a href="#">Courses</a>
+				<hr>
+				<a href="#">Equipment</a>
+				<hr>
+				<a href="#">Contact</a>
+			</div>
+		</nav>
+    <!-- Navbar end -->
+
+		<button class="hamburger hamburger--collapse" id="showLeftPush" type="button">
+  		<span class="hamburger-box">
+    		<span class="hamburger-inner"></span>
+  		</span>
+		</button>
+
+		<div>
+			<img src="img/rigare_logo.png" id="Logo" alt="Rigare Ltd">
+		</div>
+
+		<!-- Classie - class helper functions by @desandro https://github.com/desandro/classie -->
+		<script src="js/classie.js"></script>
+
+		<script>
+				var menuLeft = document.getElementById( 'cbp-spmenu-s1' ),
+				showLeftPush = document.getElementById( 'showLeftPush' ),
+				body = document.body;
+
+				showLeftPush.onclick = function() {
+					classie.toggle( this, 'active' );
+					classie.toggle( body, 'cbp-spmenu-push-toright' );
+					classie.toggle( menuLeft, 'cbp-spmenu-open' );
+					disableOther( 'showLeftPush' );
+				};
+
+				function disableOther( button ) {
+					if( button !== 'showLeftPush' ) {
+						classie.toggle( showLeftPush, 'disabled' );
+					}
+				}
+
+		</script>
+
+		<script>
+  		// Look for .hamburger
+  		var hamburger = document.querySelector(".hamburger");
+  		// On click
+  		hamburger.addEventListener("click", function() {
+    		// Toggle class "is-active"
+    		hamburger.classList.toggle("is-active");
+    		// Do something else, like open/close menu
+  		});
+		</script>
+
+  </body>
+</html>
